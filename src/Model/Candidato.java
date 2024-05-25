@@ -1,0 +1,57 @@
+package Model;
+
+public class Candidato {
+    private int numero;
+    private String nome;
+    private Cargo cargo;
+    private Partido partido;
+
+
+    public Candidato(int numero, String nome, Cargo cargo, Partido partido) {
+        this.numero = numero;
+        this.nome = nome;
+        this.cargo = cargo;
+        this.partido = partido;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Partido getPartido() {
+        return partido;
+    }
+
+    public void setPartido(Partido partido) {
+        this.partido = partido;
+    }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(Cargo cargo) {
+        this.cargo = cargo;
+    }
+    @Override
+    public String toString() {
+        return "Candidato{" +
+                "numero=" + numero +
+                ", nome='" + nome + '\'' +
+                ", partido=" + partido.getNome() +
+                ", cargo=" + cargo.getNomeCargo() +
+                '}';
+    }
+}
